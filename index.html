@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>WALEED_ZARYAB | Portfolio</title>
+    <meta name="title" content="WALEED_ZARYAB | Portfolio" />
+    <meta name="description" content="Full-stack developer specializing in creating innovative digital experiences with modern web technologies." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://facebook.com/waleed.zaryab.7.com/" />
+    <meta property="og:title" content="WALEED_ZARYAB | Portfolio" />
+    <meta property="og:description" content="Full-stack developer specializing in creating innovative digital experiences with modern web technologies." />
+    <meta property="og:image" content="/assets/images/meta-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://your-portfolio-url.com/" />
+    <meta property="twitter:title" content="CYBER_DEV | Portfolio" />
+    <meta property="twitter:description" content="Full-stack developer specializing in creating innovative digital experiences with modern web technologies." />
+    <meta property="twitter:image" content="/assets/images/meta-image.jpg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" 
+      rel="stylesheet"
+    />
+
+    <!-- Custom Font -->
+    <style>
+      @font-face {
+        font-family: 'Cyber';
+        src: url('/assets/fonts/cyber-font.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #00ff41;
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00cc33;
+      }
+
+      /* Selection Color */
+      ::selection {
+        background: #00ff41;
+        color: #000000;
+      }
+
+      /* Base Styles */
+      body {
+        background-color: #0a0a0a;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Loading Animation */
+      .loading-screen {
+        position: fixed;
+        inset: 0;
+        background: #0a0a0a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .loading-text {
+        font-family: 'Cyber', monospace;
+        color: #00ff41;
+        font-size: 24px;
+      }
+
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      .cursor {
+        display: inline-block;
+        width: 10px;
+        height: 24px;
+        background: #00ff41;
+        margin-left: 5px;
+        animation: blink 1s infinite;
+      }
+    </style>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-text">
+        INITIALIZING_SYSTEM<span class="cursor"></span>
+      </div>
+    </div>
+
+    <div id="root"></div>
+
+    <!-- Loading Script -->
+    <script>
+      window.addEventListener('load', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        setTimeout(() => {
+          loadingScreen.style.opacity = '0';
+          loadingScreen.style.transition = 'opacity 0.5s ease';
+          setTimeout(() => {
+            loadingScreen.style.display = 'none';
+          }, 500);
+        }, 1500);
+      });
+    </script>
+
+    <!-- Main Script -->
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Prevent Right Click (Optional) -->
+    <script>
+      document.addEventListener('contextmenu', (e) => e.preventDefault());
+    </script>
+
+    <!-- Console Message (Optional) -->
+    <script>
+      console.log(
+        '%cWelcome to my portfolio! 👋',
+        'color: #00ff41; font-size: 24px; font-weight: bold;'
+      );
+      console.log(
+        '%cFeel free to explore the code!',
+        'color: #00ff41; font-size: 16px;'
+      );
+    </script>
+  </body>
+</html>
